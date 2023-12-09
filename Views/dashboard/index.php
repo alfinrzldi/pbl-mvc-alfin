@@ -6,11 +6,9 @@ if(!isset($_SESSION['role_user']) || $_SESSION['role_user'] !== 1) {
 ?>
 
 <?php include_once 'layouts/_header.php'; ?>
-<!-- ini bagian toast notifikasi -->
-<?php include 'layouts/_toast.php'; ?>
+
 <div class="container-fluid z-0 min-vh-100">
   <div class="row">
-    <?php include_once 'layouts/_sidebar.php'; ?>
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <?php
       $pageMapping = [
@@ -24,11 +22,16 @@ if(!isset($_SESSION['role_user']) || $_SESSION['role_user'] !== 1) {
         include_once $pageMapping[$page];
       } else {
         echo '
-        <div
-          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">Dashboard</h1>
+        <section class="p-24 border-4 border-b-gray-800">
+          <div>
+        <h3>Dashboard</h3>
+          </div>
+          <div class="bg-white border-2 p-5 box-border">
+            <h4>
+          Selamat datang <b>'.$_SESSION['username'].' </b> di NamaraSnack
+          </h4>
         </div>
-        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+        </section>
         ';
       }
       ;

@@ -3,6 +3,7 @@ class Routes {
     public static function getRoutes(): array {
         return [
             '/' => 'HomeController@index',
+            '/profile' => 'HomeController@profile',
             '/login' => 'AuthController@loginForm',
             '/logout' => 'AuthController@logout',
             '/verifylogin' => 'AuthController@verifyLogin',
@@ -17,10 +18,17 @@ class Routes {
             '/dashboard/user/delete/(\d+)' => 'UserController@delete',
 
             //Dashboard Kategori
+            // '/dashboard/kategoris' => 'KategoriController@index',
+            // '/dashboard/kategori/save' => 'KategoriController@save',
+            // '/dashboard/kategori/update' => 'KategoriController@update',
+            // '/dashboard/kategori/delete/(\d+)' => 'KategoriController@delete',
+
             '/dashboard/kategoris' => 'KategoriController@index',
             '/dashboard/kategori/save' => 'KategoriController@save',
+            '/dashboard/kategori/edit/(\d+)' => 'KategoriController@edit',
             '/dashboard/kategori/update' => 'KategoriController@update',
             '/dashboard/kategori/delete/(\d+)' => 'KategoriController@delete',
+            
 
             //Dashboard Produk
             '/dashboard/produks' => 'ProdukController@index',
