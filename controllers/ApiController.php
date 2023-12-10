@@ -26,17 +26,22 @@ class ApiController
 
     public function getUsers()
     {
-        echo $this->userModel->findAll();
+        echo json_encode($this->userModel->findAll(), true);
     }
 
     public function getKategoris()
     {
-        echo $this->kategoriModel->findAll();
+        echo json_encode($this->kategoriModel->findAll(), true);
+    }
+
+    public function getKategoriById($id)
+    {
+        echo json_encode($this->kategoriModel->findById($id), true);
     }
 
     public function getProduks()
     {
-        echo $this->produkModel->findAll();
+        echo json_encode($this->produkModel->findAll(), true);
     }
 }
 

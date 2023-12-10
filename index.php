@@ -29,7 +29,6 @@ if (strpos($_SERVER['REQUEST_URI'], '/api') !== false) {
     
    }
    ?>
-    <link rel="stylesheet" href="assets/css/output.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">

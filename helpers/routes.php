@@ -25,7 +25,6 @@ class Routes {
 
             '/dashboard/kategoris' => 'KategoriController@index',
             '/dashboard/kategori/save' => 'KategoriController@save',
-            '/dashboard/kategori/edit/(\d+)' => 'KategoriController@edit',
             '/dashboard/kategori/update' => 'KategoriController@update',
             '/dashboard/kategori/delete/(\d+)' => 'KategoriController@delete',
             
@@ -39,6 +38,7 @@ class Routes {
             //route untuk API disini
             '/api/users' => 'ApiController@getUsers',
             '/api/kategoris' => 'ApiController@getKategoris',
+            '/api/kategori/(\d+)' => 'ApiController@getKategoriById',
             '/api/produks' => 'ApiController@getProduks',
         ];
     }
